@@ -43,6 +43,14 @@ int selection(vector<int>& numbers, int start, int N)
 void insertion(vector<int>& numbers, int idx)
 {
     // TODO: Insert numbers[idx] into its correct position in [0..idx-1]
+    int key = numbers[idx];
+    int j = idx - 1;
+    while (j >= 0 && numbers[j] > key)
+    {
+        numbers[j + 1] = numbers[j];
+        j--;
+    }
+    numbers[j+1] = key;
 }
 
 // ============================================================
