@@ -11,13 +11,13 @@ using namespace std;
 void bubble(vector<int>& numbers, int N)
 {
     // TODO: Implement one pass over elements [0..N-1], swapping adjacent pairs if out of order
-    vector<int> num = {40,10,30,50,20};
-
-   for (int i = 0; i < num.size(); i++) {
-    if (num[i] > num[i+1]) {
-        swap(num[i], num[i+1]);
+    for (int i = 0; i < numbers.size(); i++)
+    {
+        if (numbers[i] > numbers[i+1])
+        {
+            swap (numbers[i], numbers[i+1]);
+        }
     }
-   }
 }
 
 // Selection: find index of minimum from index start to end of array
