@@ -27,11 +27,13 @@ int selection(vector<int>& numbers, int start, int N)
     // TODO: Find and return the index of the minimum element in [start..N-1]
 
     int minIdx = start;
-    for (int i = start + 1; i < N; i++){
+    for (int i = start + 1; i < N; i++)//
+    {
         if (numbers[i] < numbers[minIdx]){
-            minIdx = i;
+        minIdx = i;
         }
     }
+    swap(numbers[start], numbers[minIdx]);
 
     return start;
 }
