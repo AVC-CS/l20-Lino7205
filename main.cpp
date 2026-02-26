@@ -33,7 +33,6 @@ int selection(vector<int>& numbers, int start, int N)
         minIdx = i;
         }
     }
-    swap(numbers[start], numbers[minIdx]);
 
     return start;
 }
