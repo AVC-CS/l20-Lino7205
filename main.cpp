@@ -11,11 +11,11 @@ using namespace std;
 void bubble(vector<int>& numbers, int N)
 {
     // TODO: Implement one pass over elements [0..N-1], swapping adjacent pairs if out of order
-    for (int i = 0; i < numbers.size(); i++)
+    for (int i = 0; i < N - 1; i++)
     {
         if (numbers[i] > numbers[i+1])
         {
-            swap (numbers[i], numbers[i+1]);
+            swap(numbers[i], numbers[i+1]);
         }
     }
 }
@@ -27,13 +27,11 @@ int selection(vector<int>& numbers, int start, int N)
     // TODO: Find and return the index of the minimum element in [start..N-1]
 
     int minIdx = start;
-    int startidx = 0;
-    for (int i = start + 1; i < numbers.size(); i++){
+    for (int i = start + 1; i < N; i++){
         if (numbers[i] < numbers[minIdx]){
             minIdx = i;
         }
-    } swap(numbers[startidx], numbers[minIdx]);
-    
+    }
 
     return start;
 }
