@@ -34,7 +34,7 @@ int selection(vector<int>& numbers, int start, int N)
         }
     }
 
-    return start;
+    return minIdx;
 }
 
 // Insertion: insert element at index idx into sorted portion [0..idx-1]
